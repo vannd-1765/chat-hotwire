@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: db
+  username: postgres
+  password: postgres
+
+development:
+  <<: *default
+  database: chat_hotwire_development
+
+test:
+  <<: *default
+  database: chat_hotwire_test
+
+production:
+  <<: *default
+  database: chat_hotwire_production
